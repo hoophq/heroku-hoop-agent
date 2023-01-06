@@ -1,0 +1,30 @@
+{
+    "name": "hoop agent",
+    "description": "Runs a hoop agent instance",
+    "repository": "https://github.com/hoophq/heroku-hoop-agent",
+    "logo": "https://hoopartifacts.s3.amazonaws.com/branding/hoop-symbol-black.png",
+    "website": "https://hooo.dev",
+    "buildpacks": [
+        { "url": "https://github.com/heroku/heroku-buildpack-cli" }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "standard-1x"
+        }
+    },
+    "env": {
+        "TOKEN": {
+            "description": "A token to connect with hoop gateway",
+            "required": false
+        },
+        "VERSION": {
+            "description": "The version to deploy, defaults to latest. Versions: https://github.com/hoophq/hoopcli/releases",
+            "required": false
+        }
+      },
+    "keywords": [
+        "productivity",
+        "ssh"
+    ]
+  }

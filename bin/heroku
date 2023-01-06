@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+[[ "$CONNECTION_DEBUG" == "1" ]] && set -x
+
+export HOME=${HOME:-/app}
+heroku $@
