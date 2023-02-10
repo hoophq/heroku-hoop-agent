@@ -3,4 +3,4 @@
 [[ "$CONNECTION_DEBUG" == "1" ]] && set -x
 
 export HOME=${HOME:-/app}
-heroku $@
+echo heroku $@ |bash
